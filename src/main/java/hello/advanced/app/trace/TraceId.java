@@ -1,4 +1,28 @@
 package hello.advanced.app.trace;
 
+import java.util.UUID;
+
 public class TraceId {
+
+    private String id;
+    private int level;
+
+    public TraceId(String id) {
+        this.id = createdId();
+        this.level = 0;
+    }
+
+    private TraceId(String id, int level) {
+        this.id = id;
+        this.level = level;
+    }
+
+    private String createdId() {
+        // 생성된 UUID의 일부만(8자리) 사용
+        return UUID.randomUUID().toString().substring(0, 8);
+    }
+
+    private TraceId createNextId() {
+        return new TraceId(id, level + 1);
+    }
 }
