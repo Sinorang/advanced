@@ -1,11 +1,11 @@
-package hello.advanced.app.v0;
+package hello.advanced.app.v1;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor
-public class OrderRepositoryV0 {
+public class OrderRepositoryV1 {
 
     public void save(String itemId) {
         // 저장 로직
