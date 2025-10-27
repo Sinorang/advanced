@@ -1,7 +1,10 @@
 package hello.advanced.app.trace;
 
+import lombok.Getter;
+
 import java.util.UUID;
 
+@Getter
 public class TraceId {
 
     private String id;
@@ -34,11 +37,4 @@ public class TraceId {
         return level == 0;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public int getLevel() {
-        return level;
-    }
 }
